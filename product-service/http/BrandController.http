@@ -1,0 +1,27 @@
+
+
+### BrandController::createNewBrand
+POST http://localhost:9088/api/v1/brands
+Content-Type: application/json
+
+{
+  "brandName":"Samsung"
+}
+
+### BrandController::getBrandList
+GET http://localhost:9088/api/v1/brands
+Accept: application/json
+
+
+### BrandController::getBrandById
+GET http://localhost:9088/api/v1/brands/2
+Accept: application/json
+
+### BrandController::updateBrand
+GET http://localhost:9088/api/v1/brands/2
+Accept: application/json
+
+
+### BrandController::deleteBrand
+DELETE http://localhost:9088/api/v1/brands/1
+Accept: application/json
