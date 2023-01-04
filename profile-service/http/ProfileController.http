@@ -1,0 +1,20 @@
+
+
+### ProfileController::createProfile
+POST http://localhost:9092/api/v1/profiles
+Content-Type: application/json
+
+{
+  "name":"Sazib Khan",
+  "designation":"Software Engineer",
+  "address":"Dhaka"
+
+}
+
+
+### ProfileController::createProfile
+POST http://localhost:9092/api/v1/profiles
+Content-Type: application/json
+
+
+
