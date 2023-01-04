@@ -1,7 +1,7 @@
 package com.nagalay.productservice.common;
 
 
-import com.nagalay.profileservice.dto.RestResponse;
+import com.nagalay.productservice.dto.RestResponse;
 import org.springframework.http.HttpStatus;
 
 public class ResponseFactory {

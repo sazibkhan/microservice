@@ -1,4 +1,4 @@
-package com.nagalay.profileservice.dto;
+package com.nagalay.productservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

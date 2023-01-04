@@ -25,8 +25,12 @@ public class ProductEntity {
 
 
     @ManyToOne
-    @JoinColumn(name = "brand_id",
-    foreignKey = @ForeignKey(name = "product_brand_fk"))
+    @JoinColumn(
+            name = "brand_id",
+            foreignKey = @ForeignKey(
+                    name = "products_brand_fk"
+            )
+    )
     private BrandEntity brand;
 
     @Column(name = "brand_id", insertable = false, updatable = false)

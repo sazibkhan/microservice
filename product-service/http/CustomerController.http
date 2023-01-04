@@ -1,7 +1,7 @@
 
 
 ### CustomerController::createNewCustomer
-POST http://localhost:9088/api/v1/customers
+POST http://localhost:9091/api/v1/customers
 Content-Type: application/json
 
 {
@@ -10,11 +10,11 @@ Content-Type: application/json
 }
 
 ### CustomerController::getCustomerList
-GET http://localhost:9088/api/v1/customers
+GET http://localhost:9091/api/v1/customers
 Accept: application/json
 
 ### CustomerController::updateCustomer
-PUT http://localhost:9088/api/v1/customers/1
+PUT http://localhost:9091/api/v1/customers/1
 Content-Type: application/json
 
 {
@@ -23,5 +23,5 @@ Content-Type: application/json
 }
 
 ### CustomerController::deleteCustomerById
-DELETE http://localhost:9088/api/v1/customers/1
+DELETE http://localhost:9091/api/v1/customers/1
 Accept: application/json

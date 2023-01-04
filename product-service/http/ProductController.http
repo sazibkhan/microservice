@@ -1,7 +1,7 @@
 
 
 ### ProductController::createNewProduct
-POST http://localhost:9088/api/v1/products
+POST http://localhost:9091/api/v1/products
 Content-Type: application/json
 
 {
@@ -12,11 +12,11 @@ Content-Type: application/json
 }
 
 ### ProductController::getProductById
-GET http://localhost:9088/api/v1/products/2
+GET http://localhost:9091/api/v1/products/2
 Accept: application/json
 
 ### ProductController::updateProductById
-PUT http://localhost:9088/api/v1/products/2
+PUT http://localhost:9091/api/v1/products/2
 Content-Type: application/json
 
 {
@@ -27,15 +27,15 @@ Content-Type: application/json
 }
 
 ### ProductController::deleteProductById
-DELETE http://localhost:9088/api/v1/products/2
+DELETE http://localhost:9091/api/v1/products/2
 Accept: application/json
 
 ### ProductController::getProductList
-GET http://localhost:9088/api/v1/products
+GET http://localhost:9091/api/v1/products
 Accept: application/json
 
 ### ProductController::searchProduct
-POST http://localhost:9088/api/v1/products/search-product-by-id
+POST http://localhost:9091/api/v1/products/search-product-by-id
 Content-Type: application/json
 
 {
