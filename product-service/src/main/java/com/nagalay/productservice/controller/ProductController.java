@@ -1,6 +1,10 @@
 package com.nagalay.productservice.controller;
 
+import com.nagalay.productservice.common.ResponseFactory;
+import com.nagalay.productservice.dto.RestResponse;
+import com.nagalay.productservice.dto.request.BrandDTO;
 import com.nagalay.productservice.dto.request.ProductDTO;
+import com.nagalay.productservice.dto.response.BrandRest;
 import com.nagalay.productservice.dto.response.ProductRest;
 import com.nagalay.productservice.service.ProductService;
 import lombok.AllArgsConstructor;
@@ -15,27 +19,33 @@ import java.util.List;
 public class ProductController {
 
     private  final ProductService productService;
-
-    public  void createNewProduct(@RequestBody ProductDTO productDTO){
+    @PostMapping
+    public  RestResponse createNewProduct(@RequestBody ProductDTO productDTO){
         productService.createNewProduct(productDTO);
-    }
-    @GetMapping
-    public List<ProductRest> getProductList() {
-        return productService.getProductList();
+        return ResponseFactory.saveSuccess();
     }
 
-    @GetMapping("id")
+
+    @GetMapping
+    public RestResponse getProductList() {
+        return ResponseFactory.responseData(productService.getProductList());
+    }
+
+    @GetMapping("{id}")
     public ProductRest getProductById(@PathVariable Long id){
         return  productService.getProductById(id);
     }
+
     @PutMapping("{id}")
-    public void updateProductById(@PathVariable Long id, @RequestBody ProductDTO productDTO){
+    public RestResponse updateProductById(@PathVariable Long id, @RequestBody ProductDTO productDTO){
         productService.updateProduct(id,productDTO);
+        return ResponseFactory.updateSuccess();
     }
 
     @DeleteMapping("{id}")
-    public void deleteProductById(@PathVariable Long id) {
+    public RestResponse deleteProductById(@PathVariable Long id) {
         productService.deleteProductById(id);
+        return ResponseFactory.deleteSuccess();
     }
 
 }

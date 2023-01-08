@@ -28,6 +28,7 @@ public class ProductService {
         var brandEntity = entityValidationService.validateBrand(productDTO.getBrandId());
         BeanUtils.copyProperties(productDTO, productEntity);
         productEntity.setBrand(brandEntity);
+
         productRepository.save(productEntity);
     }
 
